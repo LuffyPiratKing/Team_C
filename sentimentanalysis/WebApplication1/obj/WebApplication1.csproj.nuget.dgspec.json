@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shrish Kumar\\Downloads\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\Users\\Simran Kaur\\Documents\\Team_C\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shrish Kumar\\Downloads\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\Users\\Simran Kaur\\Documents\\Team_C\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shrish Kumar\\Downloads\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\Users\\Simran Kaur\\Documents\\Team_C\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\Shrish Kumar\\Downloads\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj",
-        "packagesPath": "C:\\Users\\Shrish Kumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shrish Kumar\\Downloads\\sentimentanalysis\\WebApplication1\\obj\\",
+        "projectPath": "C:\\Users\\Simran Kaur\\Documents\\Team_C\\sentimentanalysis\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\Simran Kaur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simran Kaur\\Documents\\Team_C\\sentimentanalysis\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Shrish Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Simran Kaur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,9 +50,19 @@
               "target": "Package",
               "version": "[7.0.9, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.15, )"
             }
           },
           "imports": [
@@ -68,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

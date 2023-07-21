@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WebApplication1.Data.Review>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+   /* .card{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: none;
+    }*/
+
+    .bottom {
+        margin-top:20px;
+    }
+    .card-img-top{
+        width:50px;
+        height:50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border:2px solid #fff;
+        margin-right: 10px;
+    }
+
+    .review {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding:10px;
+        border-radius:10px;
+    }
+
+    .form {
+        padding: 10px;
+        border: 1px solid #DDE6ED;
+        border-radius:5px;
+    }
+
+    .form-group{
+        margin-bottom:10px;
+    }
+</style>
+
+<h1>Reviews</h1>
+
+<div class="review">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width:90;">
+            <div class="card-body">
+                <div class="card-user card-header d-flex flex-row align-items-center">
+                    <img style="border-radius:50%;" src="@Html.DisplayFor(modelItem => item.Image)" class="card-img-top" alt="profile">
+                    <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Name)</h5>
+                </div>
+                <div class="card-user d-flex flex-row align-items-center justify-content-between bottom">
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Comments)</p>
+                    <a href="#" class="btn btn-primary">@Html.DisplayFor(modelItem => item.score)</a>
+                </div>
+
+            </div>
+        </div>
+    }
+    <br />
+    <form class="form" asp-action="Create" asp-controller="Review">
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Enter Your Name">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comments"></textarea>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

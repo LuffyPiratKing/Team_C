@@ -1,14 +1,30 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Data;
 
 namespace WebApplication1.Controllers
 {
     public class ReviewController : Controller
     {
+        private readonly AnalysisDbContext _context;
+        public ReviewController(AnalysisDbContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: ReviewController
         public ActionResult Index()
         {
-            return View();
+            List<Review> reviews = _context.reviews.ToList();
+            if (reviews == null)
+            {
+                return View();
+            }
+            else
+            {
+            return View(reviews);
+            }
         }
 
         // GET: ReviewController/Details/5
@@ -20,17 +36,20 @@ namespace WebApplication1.Controllers
         // GET: ReviewController/Create
         public ActionResult Create()
         {
-            return View();
+            return View("Index");
         }
 
         // POST: ReviewController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Review review)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                string name = review.Name;
+                string image = review.Image;
+                string comments = review.Comments;
+       
+                return View("Index");
             }
             catch
             {
