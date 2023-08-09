@@ -1,0 +1,14 @@
+D:\Demo applications\GroupC\DatabaseAccessLayer\bin\Debug\net6.0\DatabaseAccessLayer.deps.json
+D:\Demo applications\GroupC\DatabaseAccessLayer\bin\Debug\net6.0\DatabaseAccessLayer.dll
+D:\Demo applications\GroupC\DatabaseAccessLayer\bin\Debug\net6.0\DatabaseAccessLayer.pdb
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.csproj.AssemblyReference.cache
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.AssemblyInfoInputs.cache
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.AssemblyInfo.cs
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.csproj.CoreCompileInputs.cache
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.dll
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\refint\DatabaseAccessLayer.dll
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.pdb
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\ref\DatabaseAccessLayer.dll
+D:\Demo applications\GroupC\DatabaseAccessLayer\bin\Debug\net6.0\DatabaseAccessLayer.runtimeconfig.json
+D:\Demo applications\GroupC\DatabaseAccessLayer\obj\Debug\net6.0\DatabaseAccessLayer.genruntimeconfig.cache
