@@ -1,0 +1,28 @@
+﻿@using IdentityServer.Models
+@model Users
+@using (Html.BeginForm("Authenticate", "Authentication", FormMethod.Post))
+{
+    
+    <table align="center">
+        <tr>
+            <td>
+            @Html.Label("Enter the user name:")
+            </td>
+            <td>
+            @Html.TextBoxFor(x=>x.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Enter the password:")
+            </td>
+            <td>
+                @Html.TextBoxFor(x=>x.Password)
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <p align="center">
+        <button type="submit">Authenticate</button>
+    </p>
+}

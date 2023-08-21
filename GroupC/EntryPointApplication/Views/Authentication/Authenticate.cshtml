@@ -1,0 +1,39 @@
+﻿@model AuthenticationViewModel
+<input id ="TokenExpriationTime" hidden value="@Model.TimeoutPeriod" />
+<input id="RefreshTokenExpirationTime" hidden value="@Model.RefreshTokenExpirationTime" />
+
+<p align="center" id="AuthenticationMessage"></p>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<script>
+    
+
+    $(document).ready(function(){
+        debugger;
+        var isAuthenticatedUser = '@(Model.IsAuthenticatedUser)';
+        if (isAuthenticatedUser == 'True') {
+            $("#AuthenticationMessage").append("User exists");
+            $("#AuthenticationMessage").css("color", "green");
+        }
+        else if (isAuthenticatedUser == 'False') {
+            $("#AuthenticationMessage").append("User does not exist")
+            $("#AuthenticationMessage").css("color", "red");
+        }
+
+        //if the user is authentic
+        if (isAuthenticatedUser == 'True') {
+            
+            //get token expiration time
+            var tokenExpirationTime = $("#TokenExpriationTime").val();
+
+            //get refresh token expiration time
+            var refreshTokenExpirationTime = $("#RefreshTokenExpirationTime").val();
+            var refreshTokenExpirationTimeString = refreshTokenExpirationTime.toString();
+
+            setTimeout(function(){
+                window.location.href = '@Url.Action("CheckAndGenerateNewToken","Authentication")?refreshTokenExpirationTimeString=' + refreshTokenExpirationTimeString + '&token=' + '@(Model.Tokens.Token)' + '&refreshToken=' + '@(Model.Tokens.RefreshToken)' + '&userName=' +'@(Model.Tokens.UserName)';
+            }, tokenExpirationTime);
+        }              
+    });
+</script>
